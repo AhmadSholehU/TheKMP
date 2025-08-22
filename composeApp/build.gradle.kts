@@ -45,6 +45,9 @@ kotlin {
             implementation(libs.androidx.lifecycle.viewmodelCompose)
             implementation(libs.androidx.lifecycle.runtimeCompose)
 
+            // Icon
+            implementation(libs.material.icons.core)
+
             // Ktor for networking
             implementation(libs.ktor.client.core)
             implementation(libs.ktor.client.content.negotiation)
@@ -53,6 +56,20 @@ kotlin {
             // Koin for KMP
             implementation(libs.koin.core)
             implementation(libs.koin.compose)
+
+            //Voyager
+            // Navigator
+            implementation(libs.voyager.navigator)
+            // Screen Model
+            implementation(libs.voyager.screenmodel)
+            // BottomSheetNavigator
+            implementation(libs.voyager.bottom.sheet.navigator)
+            // TabNavigator
+            implementation(libs.voyager.tab.navigator)
+            // Transitions
+            implementation(libs.voyager.transitions)
+            // Koin integration
+            implementation(libs.voyager.koin)
 
         }
         commonTest.dependencies {

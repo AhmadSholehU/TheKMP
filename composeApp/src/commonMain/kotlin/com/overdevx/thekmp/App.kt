@@ -17,7 +17,9 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import cafe.adriel.voyager.navigator.Navigator
 import com.overdevx.thekmp.presentation.CatViewModel
+import com.overdevx.thekmp.presentation.screens.MainScreen
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 import org.koin.compose.koinInject
@@ -54,7 +56,7 @@ fun App2() {
     }
 }
 @Composable
-fun App() {
+fun App3() {
     val viewModel: CatViewModel = koinInject()
     val fact by viewModel.fact.collectAsState()
 
@@ -74,5 +76,12 @@ fun App() {
                 }
             }
         }
+    }
+}
+
+@Composable
+fun App() {
+    MaterialTheme {
+        Navigator(screen = MainScreen) // Mulai navigasi dengan MainScreen
     }
 }
